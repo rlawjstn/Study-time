@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>공부 시간</title>
+   <style>
+       body {
+           text-align: center;
+           font-size: 2rem;
+           margin-top: 20%;
+       }
+   </style>
+</head>
+<body>
+   <p id="message">🔮 오늘의 핸드폰 시간은... 🔮</p>
+   <button onclick="showRandomMessage()">눌러서 확인하기</button>
+ 
+   <script>
+       function showRandomMessage() {
+           const messages = [
+               "24시간.",
+               "12시간",
+               "1시간.",
+               "30분!",
+               "0."
+           ];
+           document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+       }
+   </script>
+</body>
+</html>
